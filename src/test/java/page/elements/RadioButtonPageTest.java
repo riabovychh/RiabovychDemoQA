@@ -26,7 +26,7 @@ public class RadioButtonPageTest extends EachPageTest {
         String actualText = radioButtonPage.getNotificationText(driver);
         String expectedText = "Yes";
 
-        //Assert.assertTrue(radioButtonPage.isYesRadioButtonSelected());
+        Assert.assertTrue(radioButtonPage.isYesRadioButtonSelected());
         Assert.assertEquals(actualText, expectedText);
     }
 }
