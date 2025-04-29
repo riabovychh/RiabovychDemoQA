@@ -1,8 +1,5 @@
 package page.elements;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.riabovych.page.elements.RadioButtonPage;
-import org.riabovych.page.elements.TextBoxPage;
+import org.riabovych.page.page.elements.RadioButtonPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,9 +12,16 @@ public class RadioButtonPageTest extends EachPageTest {
     // private WebDriver driver;
 
     @BeforeMethod
-    public void setUpMethod() {
-        openPage("https://demoqa.com/radio-button");
+    public void setUp() {
+        super.setUp();
+        driver.get("https://demoqa.com/radio-button");
         radioButtonPage = new RadioButtonPage(driver);
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        radioButtonPage = null;
+        super.tearDown();
     }
 
     @Test

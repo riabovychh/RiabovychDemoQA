@@ -3,7 +3,7 @@ package org.riabovych.page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.riabovych.page.elements.TextBoxPage;
+import org.riabovych.page.page.elements.TextBoxPage;
 
 public class DemoQaPageFactory {
     private static final WebDriver DRIVER = new ChromeDriver();

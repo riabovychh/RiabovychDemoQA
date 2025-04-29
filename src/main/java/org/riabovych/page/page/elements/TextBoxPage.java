@@ -1,4 +1,4 @@
-package org.riabovych.page.elements;
+package org.riabovych.page.page.elements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -35,9 +35,9 @@ public class TextBoxPage extends EachPage {
     private WebElement output;
 
     public TextBoxPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
+        super(driver);
     }
+
 
     public void fillFullNameInput(String value) {
         fullNameInput.clear();
